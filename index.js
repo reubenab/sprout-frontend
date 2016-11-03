@@ -15,11 +15,7 @@ import {
 // Import our store creator and routes config
 import store from './config/store';
 import routes from './config/routes';
-
-const initialState = {
-  // You can add any initial state you want to app to start with here...
-  counter: 20
-};
+import initialState from './config/initialState';
 
 // Create our store with the initial state
 const initialStore = store(initialState);

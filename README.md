@@ -81,6 +81,9 @@ Webpack is configured to allow you to import your local files via aliases instea
 | images     | assets/images     | `import logo from 'images/logo.png';` |
 | fonts      | assets/fonts      | `src: url('fonts/comic-sans.woff');` |
 
+## Layout
+Reducer actions are in `modules/`. Each reducer must the be defined in `modules/reducers.js`. 
+
 <!--
 
 ## Tools

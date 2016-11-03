@@ -1,0 +1,1 @@
+export const DOCUMENT_ADD_TEXT = 'DOCUMENT_ADD_TEXT';

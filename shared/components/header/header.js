@@ -9,7 +9,7 @@ export class Header extends Component {
 
     return (
       <header className={ styles.default }>
-        <h1>React Redux Skeleton</h1>
+        <h1>Sprout</h1>
         <nav>
           <ul>
             <li><Link to='/'>Home</Link></li>

@@ -4,16 +4,21 @@ import { Header } from 'components/header';
 import { Wrapper } from 'components/wrapper';
 import { Counter } from 'components/counter';
 import { Currency } from 'components/currency';
+import { Document } from 'components/document';
 
 export class Home extends Component {
+
+  // from home/containers/home.js - mapStateToProps() and mapDispatchToProps()
   render() {
     const {
       counter,
       currency,
+      docText,
       onIncrementCounter,
       onDecrementCounter,
       onChangeConverterAmount,
-      onChangeConverterCurrency
+      onChangeConverterCurrency,
+      onAddText
     } = this.props;
 
     const counterElement = (
@@ -31,6 +36,12 @@ export class Home extends Component {
         <Wrapper title='Counter'>
           <p>This counter demonstrates basic redux principles.</p>
           { counterElement }
+        </Wrapper>
+
+
+        <Wrapper title='Document'>
+          <p> This document represents all the text that a user has added.</p>
+          <Document text={docText} onAddText= {onAddText} />
         </Wrapper>
 
         <Wrapper title='Currency'>
