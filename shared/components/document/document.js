@@ -10,7 +10,7 @@ export class Document extends Component {
 
     return (
       <div className={ styles.default }>
-        <DocumentInput onAddText={onAddText} />
+        <DocumentInput onAddText={onAddText} text={text} />
         <p>{ text }</p>
       </div>
     );
