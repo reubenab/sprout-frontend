@@ -50,6 +50,7 @@ export class DocumentInput extends Component {
         });
         this.sendDiffs(diffs);
       }
+      this.fetchDiffs();
     }, 500);
   }
 
@@ -65,7 +66,7 @@ export class DocumentInput extends Component {
     // console.log('diffJson');
     // console.log(diffJson);
     request
-      .post('http://localhost:9000/api/edit')
+      .post('http://128.91.167.90:9000/api/edit')
       .set('Content-Type', 'application/json')
       .set('Access-Control-Allow-Origin', '*')
       .send({
@@ -74,13 +75,13 @@ export class DocumentInput extends Component {
         documentId: 'pineapple',
         diffs: diffList
       })
-      .then(response => this.fetchDiffs())
+      .then(response => [])
       .catch(error => console.log(error))
   }
 
   fetchDiffs() {
     request
-      .get('http://localhost:9000/api/fetch/pineapple/jtcho')
+      .get('http://128.91.167.90:9000/api/fetch/pineapple/jtcho')
       .then(response => this.receivedDiffs(response.body))
       .catch(error => console.log(error))
   }
@@ -89,7 +90,7 @@ export class DocumentInput extends Component {
     console.log(diffs);
     var diffOutput = []
     // format diffs appropriately
-    for (d in diffs) {
+    for (var d in diffs) {
       var slice = diffs[d];
       diffOutput.push([slice.op, slice.text]);
     }
@@ -101,7 +102,7 @@ export class DocumentInput extends Component {
     console.log('newText: ' + newText);
     this.setState({
       text: newText,
-      cachedText: this.state.text
+      cachedText: newText
     })
   }
 
