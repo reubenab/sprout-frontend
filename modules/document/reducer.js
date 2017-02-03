@@ -5,36 +5,6 @@ import * as types from './actionTypes';
 
 const initialState = '';
 
-/*function addText(state = initialState, action) {
-  switch (action.type) {
-    case types.DOCUMENT_ADD_TEXT:
-      return state + action.text;
-
-    default:
-      return state;
-}
-
-function newDiff(state = initialState, action) {
-  switch (action.type) {
-    case types.DOCUMENT_NEW_DIFF:
-      let diffs = diff_match_patch.prototype.diff_main(action.prevText, action.newText);
-      if (diffs.length > 0 && (diffs.length != 1 || diffs[0][0] != 0)) {
-        console.log("Diffs: ");
-        console.log(diffs);
-        // format diffs and send to server via AJAX call
-        return action.newText;
-      }
-
-    default:
-      return state;
-  }
-}
-
-export default combineReducers({
-  addText,
-  newDiff
-}); */
-
 export default function(state = {
   isLoading: false,
   text: '',
