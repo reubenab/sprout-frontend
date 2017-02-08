@@ -16,6 +16,10 @@ export class DocumentInput extends Component {
     this.handleTextChange = this.handleTextChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.checkDiffs();
+    var {userId, docId} = this.props;
+    console.log('From DocumentInput');
+    console.log('userId = ', userId);
+    console.log('docId = ', docId);
   }
 
   handleTextChange(e) {
