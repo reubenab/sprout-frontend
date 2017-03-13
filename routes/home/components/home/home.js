@@ -20,8 +20,11 @@ export class Home extends Component {
       <div>
         <Header />
 
+        <Wrapper title='Sidebar'>
+        </Wrapper>
+
         <Wrapper title='Document'>
-          <p> This document represents all the text that a user has added.</p>
+          <p> This is a Sprout document. </p>
           <Document text={docText} onAddText={onAddText} docId={docId} userId={userId} />
         </Wrapper>
 
