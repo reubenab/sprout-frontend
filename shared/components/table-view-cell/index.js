@@ -1,1 +1,1 @@
-export { Document } from './document';
+export { TableViewCell } from './table-view-cell';

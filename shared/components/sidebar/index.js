@@ -1,1 +1,1 @@
-export { Document } from './document';
+export { Sidebar } from './sidebar';

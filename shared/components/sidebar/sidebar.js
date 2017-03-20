@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import styles from './document.scss';
+import styles from './sidebar.scss';
 
 import { TableViewCell } from '../table-view-cell/'
 
